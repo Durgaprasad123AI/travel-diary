@@ -1,0 +1,129 @@
+/* ============ Auth pages (Register / Login) ============ */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.auth-aside {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  min-height: 100vh;
+}
+
+.auth-aside-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(23, 32, 51, 0.88), rgba(0, 140, 186, 0.55));
+}
+
+.auth-brand { position: relative; z-index: 1; }
+
+.auth-aside-quote {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 440px;
+}
+
+.auth-aside-quote h2 {
+  color: #fff;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 0.8rem;
+}
+
+.auth-aside-quote p { color: #dbe4f0; font-size: 1.02rem; }
+
+.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+}
+
+.auth-title { font-size: 1.8rem; margin-bottom: 0.2rem; }
+.auth-subtitle { color: var(--text-light); margin-bottom: 1.6rem; font-size: 0.95rem; }
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.4rem;
+  font-size: 0.92rem;
+  color: var(--text-light);
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: 600;
+}
+.auth-switch a:hover { text-decoration: underline; }
+
+.auth-admin-link {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.auth-admin-link a {
+  color: var(--text-light);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.auth-admin-link a:hover { color: var(--primary); }
+
+/* ============ Admin login ============ */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(ellipse at top, #1f2b45 0%, #0f172a 60%);
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2.4rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.admin-login-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.2rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #172033, #008cba);
+  color: #fff;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-card h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.admin-login-card .auth-subtitle { text-align: center; }
+
+@media (max-width: 860px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-aside { display: none; }
+}
